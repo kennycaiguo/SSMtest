@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:mvc="http://www.springframework.org/schema/mvc"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans    
+                        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd    
+                        http://www.springframework.org/schema/context    
+                        http://www.springframework.org/schema/context/spring-context-3.1.xsd    
+                        http://www.springframework.org/schema/mvc    
+                        http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">  
+                        
+    <bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName">
+			<value>oracle.jdbc.OracleDriver</value>
+		</property>
+		<property name="url">
+<!-- 			<value>jdbc:oracle:thin:@192.168.1.101:1521:testsrv</value> -->
+			<value>jdbc:oracle:thin:@localhost:1521:testdev</value>
+		</property>
+		<property name="username">
+			<value>szu_sjjhpt_center</value>
+		</property>
+		<property name="password">
+			<value>szu_sjjhpt_center</value>
+		</property>		
+		<property name="maxActive">
+			<value>5</value>
+		</property>
+		<property name="maxWait">
+			<value>5000</value>
+		</property>
+	</bean>
+  
+</beans>  

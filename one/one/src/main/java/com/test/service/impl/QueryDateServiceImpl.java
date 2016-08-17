@@ -17,4 +17,8 @@ public class QueryDateServiceImpl implements QueryDateService{
 		// TODO Auto-generated method stub
 		return this.bjg0101Dao.findBjByPk(name);
 	}
+	public BJg0101 test(String name) {
+		// TODO Auto-generated method stub
+		return this.bjg0101Dao.findBjByPk(name);
+	}
 }
